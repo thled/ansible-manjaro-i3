@@ -1,0 +1,4 @@
+Host *
+    ServerAliveInterval 200
+    ServerAliveCountMax 2
+
