@@ -1,0 +1,26 @@
+---
+- name: create global gitconfig
+  file:
+    src: gitconfig
+    dest: ~/.gitconfig
+
+- name: create work gitconfig
+  file:
+    src: gitconfig_work
+    dest: ~/Projects/.gitconfig
+
+- name: create private gitconfig
+  file:
+    src: gitconfig_private
+    dest: ~/MyProjects/.gitconfig
+
+- name: create global gitignore
+  file:
+    src: gitignore
+    dest: ~/.config/git/gitignore
+
+- name: install meld
+  pacman:
+    name: meld
+  become: true
+
