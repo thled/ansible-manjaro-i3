@@ -15,6 +15,3 @@
 [mergetool "meld"]
     cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
 
-[core]
-    excludesfile = ~/.config/git/gitignore
-

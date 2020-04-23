@@ -1,12 +1,12 @@
 ---
-- name: create ssh directory
+- name: create ssh config directory
   file:
-    dest: ~/.ssh
+    path: "{{ path_ssh | dirname }}" 
     state: directory
 
-- name: configure ssh
+- name: copy ssh config
   copy:
-    src: ssh_config
-    dest: ~/.ssh/config
+    src: ssh/config
+    dest: "{{ path_ssh }}"
     mode: 0644
 
