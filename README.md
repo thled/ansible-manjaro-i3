@@ -2,7 +2,7 @@
 
 ## Usage
 
-0. Install (Manjaro i3)[manjaro].
+0. Install [Manjaro i3][manjaro].
 0. Upgrade system: `$ yay`.
 0. Install Ansible: `$ yay ansible`
 0. Clone this repository: `$ git clone git@github.com:thled/ansible-manjaro-i3`
