@@ -1,43 +1,23 @@
 ---
-- name: create global gitconfig directory
-  file:
-    path: "{{ path_git_global | dirname }}"
-    state: directory
-
 - name: copy global gitconfig
-  file:
-    src: git/config
-    dest: "{{ path_git_global }}"
-
-- name: create work gitconfig directory
-  file:
-    path: "{{ path_git_work | dirname }}"
-    state: directory
+  copy:
+    src: git/.gitconfig
+    dest: ~/
 
 - name: copy work gitconfig
-  file:
-    src: git/config_work
-    dest: "{{ path_git_work }}"
-
-- name: create private gitconfig directory
-  file:
-    path: "{{ path_git_private | dirname }}"
-    state: directory
+  copy:
+    src: git/work/.gitconfig
+    dest: ~/Projects/
 
 - name: copy private gitconfig
-  file:
-    src: git/config_private
-    dest: "{{ path_git_private }}"
-
-- name: create global gitignore directory
-  file:
-    path: "{{ path_git_ignore | dirname }}"
-    state: directory
+  copy:
+    src: git/private/.gitconfig
+    dest: ~/MyProjects/
 
 - name: copy global gitignore
-  file:
+  copy:
     src: git/ignore
-    dest: "{{ path_git_ignore }}"
+    dest: ~/.config/git/
 
 - name: install meld
   pacman:

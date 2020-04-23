@@ -3,10 +3,4 @@
   connection: local
   roles:
     - manjaro
-  vars:
-    path_ssh: ~/.ssh/config
-    path_git_global: ~/.gitconfig
-    path_git_work: ~/Projects/.gitconfig
-    path_git_private: ~/MyProjects/.gitconfig
-    path_git_ignore: ~/.config/git/ignore
 
