@@ -1,17 +1,12 @@
 ---
 - name: create ssh directory
   file:
-    dest: /home/{{ ansible_user }}/.ssh
+    dest: ~/.ssh
     state: directory
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
-  become: true
 
 - name: configure ssh
   copy:
     src: ssh_config
-    dest: /home/{{ ansible_user }}/.ssh/config
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    dest: ~/.ssh/config
     mode: 0644
 
